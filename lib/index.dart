@@ -1,5 +1,8 @@
 // Export pages
-export '/pages/home_page_copy/home_page_copy_widget.dart'
-    show HomePageCopyWidget;
-export '/pages/cadastrocliente/cadastrocliente_widget.dart'
-    show CadastroclienteWidget;
+export '/page0_home_page/page0_home_page_widget.dart' show Page0HomePageWidget;
+export '/page1_bemvindo/page1_bemvindo_widget.dart' show Page1BemvindoWidget;
+export '/page_2_conteudodonivel/page2_conteudodonivel_widget.dart'
+    show Page2ConteudodonivelWidget;
+export '/page_3_materiaise_appsutilizados/page3_materiaise_appsutilizados_widget.dart'
+    show Page3MateriaiseAppsutilizadosWidget;
+export '/splash_page/splash_page_widget.dart' show SplashPageWidget;

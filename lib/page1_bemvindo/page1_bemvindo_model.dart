@@ -1,8 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import 'e_l_aviso_widget.dart' show ELAvisoWidget;
+import 'page1_bemvindo_widget.dart' show Page1BemvindoWidget;
 import 'package:flutter/material.dart';
 
-class ELAvisoModel extends FlutterFlowModel<ELAvisoWidget> {
+class Page1BemvindoModel extends FlutterFlowModel<Page1BemvindoWidget> {
   @override
   void initState(BuildContext context) {}
 

@@ -38,12 +38,12 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
               builder: (context) => Container(
                 color: Colors.transparent,
                 child: Image.asset(
-                  'assets/images/Imagem_do_ChatGPT_29_de_set._de_2026,_10_34_29.png',
+                  'assets/images/espacosons.png',
                   fit: BoxFit.cover,
                 ),
               ),
             )
-          : CadastroclienteWidget(),
+          : SplashPageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -53,24 +53,40 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   builder: (context) => Container(
                     color: Colors.transparent,
                     child: Image.asset(
-                      'assets/images/Imagem_do_ChatGPT_29_de_set._de_2026,_10_34_29.png',
+                      'assets/images/espacosons.png',
                       fit: BoxFit.cover,
                     ),
                   ),
                 )
-              : CadastroclienteWidget(),
+              : SplashPageWidget(),
         ),
         FFRoute(
-          name: HomePageCopyWidget.routeName,
-          path: HomePageCopyWidget.routePath,
-          builder: (context, params) => HomePageCopyWidget(),
+          name: Page0HomePageWidget.routeName,
+          path: Page0HomePageWidget.routePath,
+          builder: (context, params) => Page0HomePageWidget(),
         ),
         FFRoute(
-          name: CadastroclienteWidget.routeName,
-          path: CadastroclienteWidget.routePath,
-          builder: (context, params) => CadastroclienteWidget(),
+          name: Page1BemvindoWidget.routeName,
+          path: Page1BemvindoWidget.routePath,
+          builder: (context, params) => Page1BemvindoWidget(),
+        ),
+        FFRoute(
+          name: Page2ConteudodonivelWidget.routeName,
+          path: Page2ConteudodonivelWidget.routePath,
+          builder: (context, params) => Page2ConteudodonivelWidget(),
+        ),
+        FFRoute(
+          name: Page3MateriaiseAppsutilizadosWidget.routeName,
+          path: Page3MateriaiseAppsutilizadosWidget.routePath,
+          builder: (context, params) => Page3MateriaiseAppsutilizadosWidget(),
+        ),
+        FFRoute(
+          name: SplashPageWidget.routeName,
+          path: SplashPageWidget.routePath,
+          builder: (context, params) => SplashPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
+      observers: ffNavigatorObservers,
     );
 
 extension NavParamExtensions on Map<String, String?> {
