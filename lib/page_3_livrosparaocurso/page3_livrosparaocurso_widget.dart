@@ -3,30 +3,30 @@ import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'page2_conteudodonivel_model.dart';
-export 'page2_conteudodonivel_model.dart';
+import 'page3_livrosparaocurso_model.dart';
+export 'page3_livrosparaocurso_model.dart';
 
-class Page2ConteudodonivelWidget extends StatefulWidget {
-  const Page2ConteudodonivelWidget({super.key});
+class Page3LivrosparaocursoWidget extends StatefulWidget {
+  const Page3LivrosparaocursoWidget({super.key});
 
-  static String routeName = 'Page_2Conteudodonivel';
-  static String routePath = '/page2Conteudodonivel';
+  static String routeName = 'Page_3Livrosparaocurso';
+  static String routePath = '/page3Livrosparaocurso';
 
   @override
-  State<Page2ConteudodonivelWidget> createState() =>
-      _Page2ConteudodonivelWidgetState();
+  State<Page3LivrosparaocursoWidget> createState() =>
+      _Page3LivrosparaocursoWidgetState();
 }
 
-class _Page2ConteudodonivelWidgetState
-    extends State<Page2ConteudodonivelWidget> {
-  late Page2ConteudodonivelModel _model;
+class _Page3LivrosparaocursoWidgetState
+    extends State<Page3LivrosparaocursoWidget> {
+  late Page3LivrosparaocursoModel _model;
 
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   @override
   void initState() {
     super.initState();
-    _model = createModel(context, () => Page2ConteudodonivelModel());
+    _model = createModel(context, () => Page3LivrosparaocursoModel());
   }
 
   @override
@@ -90,7 +90,7 @@ class _Page2ConteudodonivelWidgetState
                     mainAxisAlignment: (FFMainAxisAlignment.start).flutterValue,
                     children: [
                       Text(
-                        'O que vou saber em cada nível?  🇩🇪',
+                        'Livros para o curso de alemão',
                         style: FlutterFlowTheme.of(context).bodyMedium.override(
                               font: GoogleFonts.cormorantGaramond(
                                 fontWeight: FontWeight.w600,
@@ -99,7 +99,7 @@ class _Page2ConteudodonivelWidgetState
                                     .fontStyle,
                               ),
                               color: Color(0xFF1C2F47),
-                              fontSize: 48.0,
+                              fontSize: 44.0,
                               letterSpacing: 0.0,
                               fontWeight: FontWeight.w600,
                               fontStyle: FlutterFlowTheme.of(context)

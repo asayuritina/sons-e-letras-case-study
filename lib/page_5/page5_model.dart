@@ -1,9 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/index.dart';
-import 'page1_bemvindo_widget.dart' show Page1BemvindoWidget;
+import 'page5_widget.dart' show Page5Widget;
 import 'package:flutter/material.dart';
 
-class Page1BemvindoModel extends FlutterFlowModel<Page1BemvindoWidget> {
+class Page5Model extends FlutterFlowModel<Page5Widget> {
   @override
   void initState(BuildContext context) {}
 

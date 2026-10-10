@@ -1,9 +1,8 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/index.dart';
-import 'page1_bemvindo_widget.dart' show Page1BemvindoWidget;
+import 'page2_niveis_widget.dart' show Page2NiveisWidget;
 import 'package:flutter/material.dart';
 
-class Page1BemvindoModel extends FlutterFlowModel<Page1BemvindoWidget> {
+class Page2NiveisModel extends FlutterFlowModel<Page2NiveisWidget> {
   @override
   void initState(BuildContext context) {}
 

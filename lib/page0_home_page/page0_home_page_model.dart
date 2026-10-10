@@ -1,4 +1,5 @@
 import '/flutter_flow/flutter_flow_util.dart';
+import '/index.dart';
 import 'page0_home_page_widget.dart' show Page0HomePageWidget;
 import 'package:flutter/material.dart';
 
@@ -36,6 +37,10 @@ class Page0HomePageModel extends FlutterFlowModel<Page0HomePageWidget> {
   FocusNode? textFieldFocusNode5;
   TextEditingController? textController6;
   String? Function(BuildContext, String?)? textController6Validator;
+  // State field(s) for TextField widget.
+  FocusNode? textFieldFocusNode6;
+  TextEditingController? textController7;
+  String? Function(BuildContext, String?)? textController7Validator;
 
   @override
   void initState(BuildContext context) {}
@@ -60,5 +65,8 @@ class Page0HomePageModel extends FlutterFlowModel<Page0HomePageWidget> {
 
     textFieldFocusNode5?.dispose();
     textController6?.dispose();
+
+    textFieldFocusNode6?.dispose();
+    textController7?.dispose();
   }
 }

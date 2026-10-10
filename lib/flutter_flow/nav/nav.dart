@@ -43,7 +43,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
               ),
             )
-          : SplashPageWidget(),
+          : Page1BemvindoWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
@@ -58,7 +58,7 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                     ),
                   ),
                 )
-              : SplashPageWidget(),
+              : Page1BemvindoWidget(),
         ),
         FFRoute(
           name: Page0HomePageWidget.routeName,
@@ -71,19 +71,34 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => Page1BemvindoWidget(),
         ),
         FFRoute(
-          name: Page2ConteudodonivelWidget.routeName,
-          path: Page2ConteudodonivelWidget.routePath,
-          builder: (context, params) => Page2ConteudodonivelWidget(),
+          name: Page2NiveisWidget.routeName,
+          path: Page2NiveisWidget.routePath,
+          builder: (context, params) => Page2NiveisWidget(),
         ),
         FFRoute(
-          name: Page3MateriaiseAppsutilizadosWidget.routeName,
-          path: Page3MateriaiseAppsutilizadosWidget.routePath,
-          builder: (context, params) => Page3MateriaiseAppsutilizadosWidget(),
+          name: Page3LivrosparaocursoWidget.routeName,
+          path: Page3LivrosparaocursoWidget.routePath,
+          builder: (context, params) => Page3LivrosparaocursoWidget(),
         ),
         FFRoute(
           name: SplashPageWidget.routeName,
           path: SplashPageWidget.routePath,
           builder: (context, params) => SplashPageWidget(),
+        ),
+        FFRoute(
+          name: Page4MateriaiseappsWidget.routeName,
+          path: Page4MateriaiseappsWidget.routePath,
+          builder: (context, params) => Page4MateriaiseappsWidget(),
+        ),
+        FFRoute(
+          name: TesteMenuWidget.routeName,
+          path: TesteMenuWidget.routePath,
+          builder: (context, params) => TesteMenuWidget(),
+        ),
+        FFRoute(
+          name: Page5Widget.routeName,
+          path: Page5Widget.routePath,
+          builder: (context, params) => Page5Widget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: ffNavigatorObservers,
@@ -222,6 +237,10 @@ class FFRoute {
                     duration: transitionInfo.duration,
                     reverseDuration: transitionInfo.duration,
                     alignment: transitionInfo.alignment,
+                    curve: transitionInfo.transitionType ==
+                            PageTransitionType.scale
+                        ? const Interval(0.0, 0.5)
+                        : Curves.linear,
                     child: child,
                   ).buildTransitions(
                     context,
