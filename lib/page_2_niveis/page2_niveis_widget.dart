@@ -119,7 +119,7 @@ class _Page2NiveisWidgetState extends State<Page2NiveisWidget> {
                               style: FlutterFlowTheme.of(context)
                                   .bodyMedium
                                   .override(
-                                    font: GoogleFonts.cormorantGaramond(
+                                    font: GoogleFonts.robotoSlab(
                                       fontWeight: FontWeight.w600,
                                       fontStyle: FlutterFlowTheme.of(context)
                                           .bodyMedium
@@ -168,22 +168,17 @@ class _Page2NiveisWidgetState extends State<Page2NiveisWidget> {
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
+                                          font: GoogleFonts.robotoSlab(
+                                            fontWeight: FontWeight.w600,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
+                                          color: Color(0xFF1C2F47),
                                           fontSize: 24.0,
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
+                                          fontWeight: FontWeight.w600,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
@@ -224,25 +219,21 @@ class _Page2NiveisWidgetState extends State<Page2NiveisWidget> {
                                       textNivelResponse.jsonBody,
                                       r'''$.Descricao''',
                                     ).toString(),
+                                    textAlign: TextAlign.start,
                                     style: FlutterFlowTheme.of(context)
                                         .bodyMedium
                                         .override(
-                                          font: GoogleFonts.inter(
-                                            fontWeight:
-                                                FlutterFlowTheme.of(context)
-                                                    .bodyMedium
-                                                    .fontWeight,
+                                          font: GoogleFonts.robotoSlab(
+                                            fontWeight: FontWeight.w600,
                                             fontStyle:
                                                 FlutterFlowTheme.of(context)
                                                     .bodyMedium
                                                     .fontStyle,
                                           ),
+                                          color: Color(0xFF1C2F47),
                                           fontSize: 24.0,
                                           letterSpacing: 0.0,
-                                          fontWeight:
-                                              FlutterFlowTheme.of(context)
-                                                  .bodyMedium
-                                                  .fontWeight,
+                                          fontWeight: FontWeight.w600,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
                                                   .bodyMedium
@@ -257,7 +248,7 @@ class _Page2NiveisWidgetState extends State<Page2NiveisWidget> {
                                   0.0, 20.0, 0.0, 20.0),
                               child: FutureBuilder<ApiCallResponse>(
                                 future: NivelCall.call(
-                                  nivel: '2',
+                                  eslNiveisId: 2,
                                 ),
                                 builder: (context, snapshot) {
                                   // Customize what your widget looks like when it's loading.
@@ -316,7 +307,7 @@ class _Page2NiveisWidgetState extends State<Page2NiveisWidget> {
                                   0.0, 0.0, 0.0, 20.0),
                               child: FutureBuilder<ApiCallResponse>(
                                 future: NivelCall.call(
-                                  descricao: '2',
+                                  eslNiveisId: 2,
                                 ),
                                 builder: (context, snapshot) {
                                   // Customize what your widget looks like when it's loading.

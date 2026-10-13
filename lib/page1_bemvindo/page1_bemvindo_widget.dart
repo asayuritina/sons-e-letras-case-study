@@ -116,19 +116,27 @@ class _Page1BemvindoWidgetState extends State<Page1BemvindoWidget> {
                                 style: FlutterFlowTheme.of(context)
                                     .labelLarge
                                     .override(
-                                      font: GoogleFonts.inter(
-                                        fontWeight: FontWeight.bold,
-                                        fontStyle: FlutterFlowTheme.of(context)
-                                            .labelLarge
-                                            .fontStyle,
-                                      ),
-                                      color: Color(0xFF1C2F47),
-                                      letterSpacing: 0.0,
-                                      fontWeight: FontWeight.bold,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .labelLarge
-                                          .fontStyle,
-                                    ),
+                                  font: GoogleFonts.robotoSlab(
+                                    fontWeight: FontWeight.bold,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .labelLarge
+                                        .fontStyle,
+                                  ),
+                                  color: Color(0xFF1C2F47),
+                                  letterSpacing: 0.0,
+                                  fontWeight: FontWeight.bold,
+                                  fontStyle: FlutterFlowTheme.of(context)
+                                      .labelLarge
+                                      .fontStyle,
+                                  shadows: [
+                                    Shadow(
+                                      color:
+                                          FlutterFlowTheme.of(context).accent4,
+                                      offset: Offset(2.0, 2.0),
+                                      blurRadius: 4.0,
+                                    )
+                                  ],
+                                ),
                               ),
                             ),
                             Align(
@@ -168,7 +176,7 @@ class _Page1BemvindoWidgetState extends State<Page1BemvindoWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-                                        font: GoogleFonts.cormorantGaramond(
+                                        font: GoogleFonts.robotoSlab(
                                           fontWeight: FontWeight.w600,
                                           fontStyle:
                                               FlutterFlowTheme.of(context)
@@ -203,7 +211,7 @@ class _Page1BemvindoWidgetState extends State<Page1BemvindoWidget> {
                                     16.0, 12.0, 16.0, 12.0),
                                 child: FutureBuilder<ApiCallResponse>(
                                   future: ESLstudentstestCall.call(
-                                    nivel: '1',
+                                    id: 1,
                                   ),
                                   builder: (context, snapshot) {
                                     // Customize what your widget looks like when it's loading.
@@ -252,75 +260,44 @@ class _Page1BemvindoWidgetState extends State<Page1BemvindoWidget> {
                                               padding: EdgeInsetsDirectional
                                                   .fromSTEB(
                                                       0.0, 20.0, 0.0, 0.0),
-                                              child: FutureBuilder<
-                                                  ApiCallResponse>(
-                                                future:
-                                                    ESLstudentstestCall.call(),
-                                                builder: (context, snapshot) {
-                                                  // Customize what your widget looks like when it's loading.
-                                                  if (!snapshot.hasData) {
-                                                    return Center(
-                                                      child: SizedBox(
-                                                        width: 50.0,
-                                                        height: 50.0,
-                                                        child:
-                                                            CircularProgressIndicator(
-                                                          valueColor:
-                                                              AlwaysStoppedAnimation<
-                                                                  Color>(
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .primary,
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    );
-                                                  }
-                                                  final textESLstudentstestResponse =
-                                                      snapshot.data!;
-
-                                                  return Text(
-                                                    'Seu nível atual :  ${getJsonField(
-                                                      containerESLstudentstestResponse
-                                                          .jsonBody,
-                                                      r'''$.nivelNome''',
-                                                    ).toString()}',
-                                                    style: FlutterFlowTheme.of(
-                                                            context)
+                                              child: Text(
+                                                'Seu nível atual :  ${getJsonField(
+                                                  containerESLstudentstestResponse
+                                                      .jsonBody,
+                                                  r'''$.nivel.Niveis''',
+                                                ).toString()}',
+                                                style:
+                                                    FlutterFlowTheme.of(context)
                                                         .bodyMedium
                                                         .override(
-                                                      font: GoogleFonts.inter(
-                                                        fontWeight:
-                                                            FontWeight.w600,
-                                                        fontStyle:
-                                                            FlutterFlowTheme.of(
-                                                                    context)
-                                                                .bodyMedium
-                                                                .fontStyle,
-                                                      ),
-                                                      color: Color(0xFF1C2F47),
-                                                      fontSize: 24.0,
-                                                      letterSpacing: 0.0,
-                                                      fontWeight:
-                                                          FontWeight.w600,
-                                                      fontStyle:
+                                                  font: GoogleFonts.robotoSlab(
+                                                    fontWeight: FontWeight.w600,
+                                                    fontStyle:
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .bodyMedium
+                                                            .fontStyle,
+                                                  ),
+                                                  color: Color(0xFF1C2F47),
+                                                  fontSize: 24.0,
+                                                  letterSpacing: 0.0,
+                                                  fontWeight: FontWeight.w600,
+                                                  fontStyle:
+                                                      FlutterFlowTheme.of(
+                                                              context)
+                                                          .bodyMedium
+                                                          .fontStyle,
+                                                  shadows: [
+                                                    Shadow(
+                                                      color:
                                                           FlutterFlowTheme.of(
                                                                   context)
-                                                              .bodyMedium
-                                                              .fontStyle,
-                                                      shadows: [
-                                                        Shadow(
-                                                          color: FlutterFlowTheme
-                                                                  .of(context)
                                                               .accent4,
-                                                          offset:
-                                                              Offset(2.0, 2.0),
-                                                          blurRadius: 2.0,
-                                                        )
-                                                      ],
-                                                    ),
-                                                  );
-                                                },
+                                                      offset: Offset(2.0, 2.0),
+                                                      blurRadius: 2.0,
+                                                    )
+                                                  ],
+                                                ),
                                               ),
                                             ),
                                           ),
@@ -401,8 +378,7 @@ class _Page1BemvindoWidgetState extends State<Page1BemvindoWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                font: GoogleFonts
-                                                    .cormorantGaramond(
+                                                font: GoogleFonts.robotoSlab(
                                                   fontWeight: FontWeight.w600,
                                                   fontStyle:
                                                       FlutterFlowTheme.of(
@@ -486,8 +462,7 @@ class _Page1BemvindoWidgetState extends State<Page1BemvindoWidget> {
                                             style: FlutterFlowTheme.of(context)
                                                 .bodyMedium
                                                 .override(
-                                              font:
-                                                  GoogleFonts.cormorantGaramond(
+                                              font: GoogleFonts.robotoSlab(
                                                 fontWeight: FontWeight.w600,
                                                 fontStyle:
                                                     FlutterFlowTheme.of(context)
@@ -577,8 +552,7 @@ class _Page1BemvindoWidgetState extends State<Page1BemvindoWidget> {
                                                   FlutterFlowTheme.of(context)
                                                       .bodyMedium
                                                       .override(
-                                                font: GoogleFonts
-                                                    .cormorantGaramond(
+                                                font: GoogleFonts.robotoSlab(
                                                   fontWeight: FontWeight.w600,
                                                   fontStyle:
                                                       FlutterFlowTheme.of(

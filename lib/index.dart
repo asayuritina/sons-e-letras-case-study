@@ -9,3 +9,5 @@ export '/page_4_materiaiseapps/page4_materiaiseapps_widget.dart'
     show Page4MateriaiseappsWidget;
 export '/menu/teste_menu/teste_menu_widget.dart' show TesteMenuWidget;
 export '/page_5/page5_widget.dart' show Page5Widget;
+export '/page_4_materiaiseapps_copy/page4_materiaiseapps_copy_widget.dart'
+    show Page4MateriaiseappsCopyWidget;

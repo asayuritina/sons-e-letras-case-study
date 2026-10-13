@@ -34,9 +34,24 @@ class ESLstudentstestCall {
         response,
         r'''$.Nome''',
       ));
-  static String? nivel(dynamic response) => castToType<String>(getJsonField(
+  static String? emailAluno(dynamic response) =>
+      castToType<String>(getJsonField(
+        response,
+        r'''$.Email''',
+      ));
+  static dynamic objetivodoAluno(dynamic response) => getJsonField(
+        response,
+        r'''$.objetivoAluno''',
+      );
+  static String? nivelAluno(dynamic response) =>
+      castToType<String>(getJsonField(
         response,
         r'''$.nivel.Niveis''',
+      ));
+  static String? descricaoNivel(dynamic response) =>
+      castToType<String>(getJsonField(
+        response,
+        r'''$.nivel.Descricao''',
       ));
 }
 

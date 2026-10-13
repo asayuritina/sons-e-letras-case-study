@@ -99,6 +99,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: Page5Widget.routeName,
           path: Page5Widget.routePath,
           builder: (context, params) => Page5Widget(),
+        ),
+        FFRoute(
+          name: Page4MateriaiseappsCopyWidget.routeName,
+          path: Page4MateriaiseappsCopyWidget.routePath,
+          builder: (context, params) => Page4MateriaiseappsCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
       observers: ffNavigatorObservers,

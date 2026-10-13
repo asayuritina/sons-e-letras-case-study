@@ -1468,6 +1468,8 @@ class _Page0HomePageWidgetState extends State<Page0HomePageWidget>
                                               curve: Curves.ease,
                                             );
                                           });
+
+                                          context.safePop();
                                         },
                                         child: Text(
                                           'Já tenho uma conta',
